@@ -1,0 +1,76 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+      timezone: Asia/Tokyo
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    assignees:
+      - poad
+    groups:
+      actions:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: '/cdk/'
+    schedule:
+      interval: daily
+      timezone: Asia/Tokyo
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    assignees:
+      - poad
+    groups:
+      root:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: '/cdk/kvs/'
+    schedule:
+      interval: daily
+      timezone: Asia/Tokyo
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    assignees:
+      - poad
+    groups:
+      kvs:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: '/cdk/cloudfront/'
+    schedule:
+      interval: daily
+      timezone: Asia/Tokyo
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    assignees:
+      - poad
+    groups:
+      cloudfront:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: '/app/'
+    schedule:
+      interval: daily
+      timezone: Asia/Tokyo
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    assignees:
+      - poad
+    groups:
+      cloudfront:
+        patterns:
+          - '*'

@@ -1,0 +1,78 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+    - main
+
+  workflow_dispatch:
+
+env:
+  OIDC_IAM_ROLE_ARN: ${{ secrets.OIDC_IAM_ROLE_ARN }}
+  AWS_REGION: us-west-2
+
+permissions:
+  id-token: write
+  contents: read
+
+# 同時実行すると CREATE_IN_PROGRESS や UPDATE_IN_PROGRESS 状態で cdk deploy を行う可能性があるため抑止する
+concurrency:
+  group: "cloudformation"
+  cancel-in-progress: false
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: ${{ env.OIDC_IAM_ROLE_ARN }}
+        role-session-name: GitHubActions
+        aws-region: ${{ env.AWS_REGION }}
+
+    - uses: actions/checkout@v4
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: latest
+        run_install: |
+          - recursive: true
+            cwd: cdk
+            args: [--no-frozen-lockfile]
+          - args: [--global, aws-cdk]
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4.0.1
+      with:
+        node-version: ${{ matrix.node-version }}
+        check-latest: true
+
+    - name: Install AWS CLI
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install --update
+        rm -rf awscliv2.zip aws
+
+    - name: deploy (kvs)
+      working-directory: ./cdk/kvs
+      run: cdk deploy
+
+    - name: Retirives KVS ARN and ID
+      id: kvs-arn-id
+      run: |
+        ARN=$(aws cloudformation describe-stacks --stack-name cloudfront-kvs-example-kvs-stack --query 'Stacks[].Outputs[?OutputKey==`KvsArn`].OutputValue' --no-cli-pager --output text)
+        ID=$(aws cloudformation describe-stacks --stack-name cloudfront-kvs-example-kvs-stack --query 'Stacks[].Outputs[?OutputKey==`KvsId`].OutputValue' --no-cli-pager --output text)
+        echo "ARN=${ARN}" >> $GITHUB_OUTPUT
+        echo "ID=${ID}" >> $GITHUB_OUTPUT
+
+    - name: deploy (cloudfront)
+      working-directory: cdk/cloudfront
+      run: cdk deploy -c kvs-arn=${{ steps.kvs-arn-id.outputs.ARN }} -c kvs-id=${{ steps.kvs-arn-id.outputs.ID }}

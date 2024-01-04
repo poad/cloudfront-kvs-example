@@ -1,0 +1,9 @@
+{
+  "name": "cloudfront-kvs-example",
+  "private": true,
+  "scripts": {
+    "lint": "pnpm run -r --parallel  /^.*:check$/",
+    "lint-fix": "pnpm run -r --parallel  /^.*:fix$/",
+    "build": "pnpm run -r --parallel build"
+  }
+}

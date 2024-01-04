@@ -1,0 +1,40 @@
+{
+	"name": "@cloudfront-kvs-example/cloudfront-app",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"start": "vite",
+		"dev": "vite",
+		"build": "vite build",
+		"serve": "vite preview",
+		"test": "vitest --passWithNoTests",
+		"prettier:check": "prettier --check src",
+		"prettier:fix": "prettier --write src",
+		"eslint:check": "eslint --ext .ts,.js,.tsx,.jsx src",
+		"eslint:fix": "eslint --fix --ext .ts,.js,.tsx,.jsx src",
+		"lint": "pnpm run --parallel /^.*:check$/",
+		"lint-fix": "pnpm run /^.*:fix$/"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.17.0",
+		"@typescript-eslint/parser": "^6.17.0",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-standard-with-typescript": "^43.0.0",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-prettier": "^5.1.2",
+		"eslint-plugin-solid": "^0.13.1",
+		"prettier": "^3.1.1",
+		"solid-devtools": "^0.29.2",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10",
+		"vite-plugin-pages": "^0.32.0",
+		"vite-plugin-solid": "^2.8.0"
+	},
+	"dependencies": {
+		"@solidjs/router": "^0.10.6",
+		"solid-js": "^1.8.8"
+	}
+}
