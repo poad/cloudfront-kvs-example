@@ -18,8 +18,8 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.17.0",
-		"@typescript-eslint/parser": "^6.17.0",
+		"@typescript-eslint/eslint-plugin": "^6.18.1",
+		"@typescript-eslint/parser": "^6.18.1",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-config-standard-with-typescript": "^43.0.0",
@@ -34,7 +34,7 @@
 		"vite-plugin-solid": "^2.8.0"
 	},
 	"dependencies": {
-		"@solidjs/router": "^0.10.6",
-		"solid-js": "^1.8.8"
+		"@solidjs/router": "^0.10.7",
+		"solid-js": "^1.8.9"
 	}
 }
