@@ -3164,6 +3164,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.23.9
+      '@testing-library/jest-dom': 6.3.0
       '@types/babel__core': 7.20.5
       babel-preset-solid: 1.8.12(@babel/core@7.23.9)
       merge-anything: 5.1.7
