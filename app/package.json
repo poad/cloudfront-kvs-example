@@ -29,7 +29,7 @@
 		"prettier": "^3.2.5",
 		"solid-devtools": "^0.29.3",
 		"typescript": "^5.4.2",
-		"vite": "^5.1.5",
+		"vite": "^5.1.6",
 		"vite-plugin-pages": "^0.32.0",
 		"vite-plugin-solid": "^2.10.1"
 	},
