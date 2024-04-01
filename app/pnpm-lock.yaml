@@ -543,7 +543,7 @@ packages:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
     dependencies:
-      '@humanwhocodes/object-schema': 2.0.2
+      '@humanwhocodes/object-schema': 2.0.3
       debug: 4.3.4
       minimatch: 3.1.2
     transitivePeerDependencies:
@@ -555,8 +555,8 @@ packages:
     engines: {node: '>=12.22'}
     dev: true
 
-  /@humanwhocodes/object-schema@2.0.2:
-    resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
+  /@humanwhocodes/object-schema@2.0.3:
+    resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     dev: true
 
   /@jridgewell/gen-mapping@0.3.5:
@@ -739,13 +739,13 @@ packages:
     dev: true
     optional: true
 
-  /@solid-devtools/debugger@0.23.3(solid-js@1.8.16):
-    resolution: {integrity: sha512-VrgswTjb2FyHxQJp5y5u7OaJ2k1R14LYlAOX/1rDZrGHWKdGYCaWHGzxI7C8AExtMP+LS+WOxy0uXMPQpoAD2g==}
+  /@solid-devtools/debugger@0.23.4(solid-js@1.8.16):
+    resolution: {integrity: sha512-EfTB1Eo313wztQYGJ4Ec/wE70Ay2d603VCXfT3RlyqO5QfLrQGRHX5NXC07hJpQTJJJ3tbNgzO7+ZKo76MM5uA==}
     peerDependencies:
       solid-js: ^1.8.0
     dependencies:
       '@nothing-but/utils': 0.12.1
-      '@solid-devtools/shared': 0.13.1(solid-js@1.8.16)
+      '@solid-devtools/shared': 0.13.2(solid-js@1.8.16)
       '@solid-primitives/bounds': 0.0.118(solid-js@1.8.16)
       '@solid-primitives/cursor': 0.0.112(solid-js@1.8.16)
       '@solid-primitives/event-bus': 1.0.11(solid-js@1.8.16)
@@ -759,8 +759,8 @@ packages:
       solid-js: 1.8.16
     dev: true
 
-  /@solid-devtools/shared@0.13.1(solid-js@1.8.16):
-    resolution: {integrity: sha512-qaAcZF47FFr4alVQSy5ooLy7mMt4MMDxSHw52heY1oCut8yfXDrnLcYDONabfoin2WYIwsQpjYhryHgjtB0uDg==}
+  /@solid-devtools/shared@0.13.2(solid-js@1.8.16):
+    resolution: {integrity: sha512-Y4uaC4EfTVwBR537MZwfaY/eiWAh+hW4mbtnwNuUw/LFmitHSkQhNQTUlLQv/S0chtwrYWQBxvXos1dC7e8R9g==}
     peerDependencies:
       solid-js: ^1.8.0
     dependencies:
@@ -1378,7 +1378,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001603
-      electron-to-chromium: 1.4.722
+      electron-to-chromium: 1.4.723
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -1589,8 +1589,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /electron-to-chromium@1.4.722:
-    resolution: {integrity: sha512-5nLE0TWFFpZ80Crhtp4pIp8LXCztjYX41yUcV6b+bKR2PqzjskTMOOlBi1VjBHlvHwS+4gar7kNKOrsbsewEZQ==}
+  /electron-to-chromium@1.4.723:
+    resolution: {integrity: sha512-rxFVtrMGMFROr4qqU6n95rUi9IlfIm+lIAt+hOToy/9r6CDv0XiEcQdC3VP71y1pE5CFTzKV0RvxOGYCPWWHPw==}
     dev: true
 
   /es-abstract@1.23.3:
@@ -3082,8 +3082,8 @@ packages:
       '@babel/core': 7.24.3
       '@babel/plugin-syntax-typescript': 7.24.1(@babel/core@7.24.3)
       '@babel/types': 7.24.0
-      '@solid-devtools/debugger': 0.23.3(solid-js@1.8.16)
-      '@solid-devtools/shared': 0.13.1(solid-js@1.8.16)
+      '@solid-devtools/debugger': 0.23.4(solid-js@1.8.16)
+      '@solid-devtools/shared': 0.13.2(solid-js@1.8.16)
       solid-js: 1.8.16
       vite: 5.2.7
     transitivePeerDependencies:
