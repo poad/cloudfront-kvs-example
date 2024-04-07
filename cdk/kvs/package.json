@@ -4,6 +4,7 @@
   "bin": {
     "kvs": "bin/kvs.js"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",

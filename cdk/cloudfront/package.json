@@ -4,6 +4,7 @@
   "bin": {
     "cloudfront": "bin/cloudfront.js"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
