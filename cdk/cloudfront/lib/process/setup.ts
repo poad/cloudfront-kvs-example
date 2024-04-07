@@ -1,6 +1,6 @@
-import * as childProcess from 'child_process';
-import * as fs from 'fs';
-import * as path from 'path';
+import * as childProcess from 'node:child_process';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 import * as mustache from 'mustache';
 
 export const compileBundles = ({ kvsId }: { kvsId: string }) => {
@@ -15,7 +15,9 @@ export const compileBundles = ({ kvsId }: { kvsId: string }) => {
   fs.writeFileSync(path.resolve(functionBasePath, 'index.ts'), handlerCode);
 
   const appBasePath = path.resolve(process.cwd(), '../../app');
+  // biome-ignore lint/complexity/noForEach: <explanation>
   [functionBasePath, appBasePath].forEach((basePath) => {
+    // biome-ignore lint/complexity/noForEach: <explanation>
     fs.readdirSync(basePath, {
       withFileTypes: true,
     })
@@ -32,6 +34,7 @@ export const compileBundles = ({ kvsId }: { kvsId: string }) => {
         }
       });
 
+    // biome-ignore lint/complexity/noForEach: <explanation>
     ['pwd', 'pnpm install', 'pnpm build'].forEach((cmd) => {
       childProcess.execSync(cmd, {
         cwd: path.resolve(basePath),
