@@ -1,6 +1,7 @@
 {
   "name": "cloudfront-kvs-example",
   "private": true,
+  "type": "module",
   "scripts": {
     "lint": "pnpm run -r --parallel  /^.*:check$/",
     "lint-fix": "pnpm run -r --parallel  /^.*:fix$/",
