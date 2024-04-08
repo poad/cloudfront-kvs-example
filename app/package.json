@@ -11,8 +11,8 @@
 		"test": "vitest --passWithNoTests",
 		"prettier:check": "prettier --check src",
 		"prettier:fix": "prettier --write src",
-		"eslint:check": "eslint --ext .ts,.js,.tsx,.jsx src",
-		"eslint:fix": "eslint --fix --ext .ts,.js,.tsx,.jsx src",
+		"eslint:check": "eslint",
+		"eslint:fix": "eslint --fix",
 		"lint": "pnpm run --parallel /^.*:check$/",
 		"lint-fix": "pnpm run /^.*:fix$/"
 	},
