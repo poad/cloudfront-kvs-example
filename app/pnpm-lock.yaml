@@ -766,7 +766,7 @@ packages:
     dependencies:
       '@solid-primitives/event-bus': 1.0.11(solid-js@1.8.16)
       '@solid-primitives/event-listener': 2.3.3(solid-js@1.8.16)
-      '@solid-primitives/media': 2.2.8(solid-js@1.8.16)
+      '@solid-primitives/media': 2.2.9(solid-js@1.8.16)
       '@solid-primitives/refs': 1.0.8(solid-js@1.8.16)
       '@solid-primitives/rootless': 1.4.5(solid-js@1.8.16)
       '@solid-primitives/scheduled': 1.4.3(solid-js@1.8.16)
@@ -826,8 +826,8 @@ packages:
       solid-js: 1.8.16
     dev: true
 
-  /@solid-primitives/media@2.2.8(solid-js@1.8.16):
-    resolution: {integrity: sha512-jcwTxjEn07W5KEeQIc0nR+07xRjvsWTf115PIwScCWgo6aPkfW3x74aq7lH5F3mLfb/9SeTn0ixz8fBVel3cHg==}
+  /@solid-primitives/media@2.2.9(solid-js@1.8.16):
+    resolution: {integrity: sha512-QUmU62D4/d9YWx/4Dvr/UZasIkIpqNXz7wosA5GLmesRW9XlPa3G5M6uOmTw73SByHNTCw0D6x8bSdtvvLgzvQ==}
     peerDependencies:
       solid-js: ^1.6.12
     dependencies:
@@ -1374,7 +1374,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001607
-      electron-to-chromium: 1.4.730
+      electron-to-chromium: 1.4.731
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -1578,8 +1578,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /electron-to-chromium@1.4.730:
-    resolution: {integrity: sha512-oJRPo82XEqtQAobHpJIR3zW5YO3sSRRkPz2an4yxi1UvqhsGm54vR/wzTFV74a3soDOJ8CKW7ajOOX5ESzddwg==}
+  /electron-to-chromium@1.4.731:
+    resolution: {integrity: sha512-+TqVfZjpRz2V/5SPpmJxq9qK620SC5SqCnxQIOi7i/U08ZDcTpKbT7Xjj9FU5CbXTMUb4fywbIr8C7cGv4hcjw==}
     dev: true
 
   /es-abstract@1.23.3:
