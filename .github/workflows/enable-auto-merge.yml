@@ -1,27 +1,31 @@
-name: enables auto merge
+name: dependabot-auto-merge
 
 on:
-  pull_request:
-    branches:
-      - main
+  pull_request_target:
+    branches: [ main ]
 
-permissions:
-  id-token: write
-  contents: read
+permissions: write-all
 
 jobs:
-  configure:
+  auto-merge:
     runs-on: ubuntu-latest
 
-    if: github.actor != 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]'
 
     steps:
-    - name: Pull request auto merge enabler
-      if: github.event_name == 'pull_request'
-      uses: poad/github-pull-request-auto-merge-enable-action@v2.0.1
-      with:
-        pull_request_number: ${{ github.event.pull_request.number }}
-        github_token: ${{ secrets.PERSONAL_TOKEN_FOR_GITHUB_ACTIONS }}
-        repository: ${{ github.event.repository.name }}
-        owner: ${{ github.repository_owner }}
-        merge_method: SQUASH
+      - uses: actions/checkout@v4
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Approve & enable auto-merge for Dependabot Pull Request
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr review --approve "$PR_URL"
+          gh pr edit "$PR_URL" -t "(auto merged) $PR_TITLE"
+          gh pr merge --auto --merge "$PR_URL"
