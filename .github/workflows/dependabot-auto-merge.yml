@@ -1,20 +1,10 @@
 name: dependabot-auto-merge
 
-on:
-  pull_request_target:
+on: pull_request
 
 permissions:
-  actions: write
-  checks: write
   contents: write
-  deployments: none
-  id-token: write
-  issues: none
-  packages: none
   pull-requests: write
-  repository-projects: write
-  security-events: write
-  statuses: write
 
 jobs:
   auto-merge:
@@ -24,8 +14,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          config: .github/dependabot-auto-merge.yml
+
+      - name: Enable auto-merge for Dependabot Dependabot Pull Request
+        run: |
+          gh pr merge --auto --merge "$PR_URL"
+          gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
