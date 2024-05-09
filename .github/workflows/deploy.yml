@@ -49,8 +49,8 @@ jobs:
         package_json_file: cdk/package.json
         run_install: |
           - recursive: true
-          cwd: cdk
-          args: [--no-frozen-lockfile]
+            cwd: cdk
+            args: [--no-frozen-lockfile]
           - args: [--global, aws-cdk]
 
     - name: Install AWS CLI
