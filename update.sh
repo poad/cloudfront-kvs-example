@@ -13,7 +13,22 @@ if [ $result -ne 0 ]; then
   exit $result
 fi
 
-cd "${CURRENT}" || exit
+cd "${CURRENT}/app" || exit
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}" || exit
+  exit $result
+fi
+echo ""
+pwd
+corepack use pnpm@latest && pnpm install && pnpm up -r
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}" || exit
+  exit $result
+fi
+
+cd "${CURRENT}/cdk" || exit
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
