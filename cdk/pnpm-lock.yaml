@@ -46,8 +46,8 @@ importers:
         specifier: ^4.2.5
         version: 4.2.5
       '@types/node':
-        specifier: ^20.14.4
-        version: 20.14.4
+        specifier: ^20.14.6
+        version: 20.14.6
       aws-cdk:
         specifier: ^2.146.0
         version: 2.146.0
@@ -56,7 +56,7 @@ importers:
         version: 4.2.0
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.14.4)(typescript@5.4.5)
+        version: 10.9.2(@types/node@20.14.6)(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -74,14 +74,14 @@ importers:
         version: 0.5.21
     devDependencies:
       '@types/node':
-        specifier: ^20.14.4
-        version: 20.14.4
+        specifier: ^20.14.6
+        version: 20.14.6
       aws-cdk:
         specifier: ^2.146.0
         version: 2.146.0
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.14.4)(typescript@5.4.5)
+        version: 10.9.2(@types/node@20.14.6)(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -179,8 +179,8 @@ packages:
   '@types/mustache@4.2.5':
     resolution: {integrity: sha512-PLwiVvTBg59tGFL/8VpcGvqOu3L4OuveNvPi0EYbWchRdEVP++yRUXJPFl+CApKEq13017/4Nf7aQ5lTtHUNsA==}
 
-  '@types/node@20.14.4':
-    resolution: {integrity: sha512-1ChboN+57suCT2t/f8lwtPY/k3qTpuD/qnqQuYoBg6OQOcPyaw7PiZVdGpaZYAvhDDtqrt0oAaM8+oSu1xsUGw==}
+  '@types/node@20.14.6':
+    resolution: {integrity: sha512-JbA0XIJPL1IiNnU7PFxDXyfAwcwVVrOoqyzzyQTyMeVhBzkJVMSkC1LlVsRQ2lpqiY4n6Bb9oCS6lzDKVQxbZw==}
 
   '@typescript-eslint/eslint-plugin@7.13.1':
     resolution: {integrity: sha512-kZqi+WZQaZfPKnsflLJQCz6Ze9FFSMfXrrIOcyargekQxG37ES7DJNpJUE9Q/X5n3yTIP/WPutVNzgknQ7biLg==}
@@ -1187,7 +1187,7 @@ snapshots:
 
   '@types/mustache@4.2.5': {}
 
-  '@types/node@20.14.4':
+  '@types/node@20.14.6':
     dependencies:
       undici-types: 5.26.5
 
@@ -2130,14 +2130,14 @@ snapshots:
     dependencies:
       typescript: 5.4.5
 
-  ts-node@10.9.2(@types/node@20.14.4)(typescript@5.4.5):
+  ts-node@10.9.2(@types/node@20.14.6)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.14.4
+      '@types/node': 20.14.6
       acorn: 8.12.0
       acorn-walk: 8.3.3
       arg: 4.1.3

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@solidjs/router':
-        specifier: ^0.13.5
-        version: 0.13.5(solid-js@1.8.17)
+        specifier: ^0.13.6
+        version: 0.13.6(solid-js@1.8.17)
       solid-js:
         specifier: ^1.8.17
         version: 1.8.17
@@ -53,7 +53,7 @@ importers:
         version: 5.3.1
       vite-plugin-pages:
         specifier: ^0.32.2
-        version: 0.32.2(@solidjs/router@0.13.5(solid-js@1.8.17))(vite@5.3.1)
+        version: 0.32.2(@solidjs/router@0.13.6(solid-js@1.8.17))(vite@5.3.1)
       vite-plugin-solid:
         specifier: ^2.10.2
         version: 2.10.2(solid-js@1.8.17)(vite@5.3.1)
@@ -545,8 +545,8 @@ packages:
     peerDependencies:
       solid-js: ^1.6.12
 
-  '@solidjs/router@0.13.5':
-    resolution: {integrity: sha512-I/bR5ZHCz2Dx80qL+6uGwSdclqXRqoT49SJ5cvLbOuT3HnYysSIxSfULCTWUMLFVcgPh5GrdHV6KwEoyrbPZZA==}
+  '@solidjs/router@0.13.6':
+    resolution: {integrity: sha512-CdpFsBYoiJ/FQ4wZIamj3KEFRkmrYu5sVXM6PouNkmSENta1YJamsm9wa/VjaPmkw2RsnDnO0UvZ705v6EgOXQ==}
     peerDependencies:
       solid-js: ^1.8.6
 
@@ -870,8 +870,8 @@ packages:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
 
-  electron-to-chromium@1.4.804:
-    resolution: {integrity: sha512-gXMMs2m7aUTdZpORQAvMCyH0JHywSpZxjblSc/C81aDr34jh0hmpplTFcM4AYrYALVmiVT/r63oA3tEG1BPVRw==}
+  electron-to-chromium@1.4.807:
+    resolution: {integrity: sha512-kSmJl2ZwhNf/bcIuCH/imtNOKlpkLDn2jqT5FJ+/0CXjhnFaOa9cOe9gHKKy71eM49izwuQjZhKk+lWQ1JxB7A==}
 
   es-abstract@1.23.3:
     resolution: {integrity: sha512-e+HfNH61Bj1X9/jLc5v1owaLYuHdeHHSQlkhCBiTK8rBvKaULl/beGMxwrMXjpYrv4pz22BlY570vVePA2ho4A==}
@@ -2322,7 +2322,7 @@ snapshots:
     dependencies:
       solid-js: 1.8.17
 
-  '@solidjs/router@0.13.5(solid-js@1.8.17)':
+  '@solidjs/router@0.13.6(solid-js@1.8.17)':
     dependencies:
       solid-js: 1.8.17
 
@@ -2607,7 +2607,7 @@ snapshots:
   browserslist@4.23.1:
     dependencies:
       caniuse-lite: 1.0.30001636
-      electron-to-chromium: 1.4.804
+      electron-to-chromium: 1.4.807
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
 
@@ -2735,7 +2735,7 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  electron-to-chromium@1.4.804: {}
+  electron-to-chromium@1.4.807: {}
 
   es-abstract@1.23.3:
     dependencies:
@@ -3760,7 +3760,7 @@ snapshots:
 
   validate-html-nesting@1.2.2: {}
 
-  vite-plugin-pages@0.32.2(@solidjs/router@0.13.5(solid-js@1.8.17))(vite@5.3.1):
+  vite-plugin-pages@0.32.2(@solidjs/router@0.13.6(solid-js@1.8.17))(vite@5.3.1):
     dependencies:
       '@types/debug': 4.1.12
       debug: 4.3.5
@@ -3773,7 +3773,7 @@ snapshots:
       vite: 5.3.1
       yaml: 2.4.5
     optionalDependencies:
-      '@solidjs/router': 0.13.5(solid-js@1.8.17)
+      '@solidjs/router': 0.13.6(solid-js@1.8.17)
     transitivePeerDependencies:
       - supports-color
 
