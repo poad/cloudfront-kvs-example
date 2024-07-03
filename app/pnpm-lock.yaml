@@ -44,19 +44,19 @@ importers:
         version: 3.3.2
       solid-devtools:
         specifier: ^0.30.1
-        version: 0.30.1(solid-js@1.8.18)(vite@5.3.2)
+        version: 0.30.1(solid-js@1.8.18)(vite@5.3.3)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
       vite:
-        specifier: ^5.3.2
-        version: 5.3.2
+        specifier: ^5.3.3
+        version: 5.3.3
       vite-plugin-pages:
         specifier: ^0.32.3
-        version: 0.32.3(@solidjs/router@0.13.6(solid-js@1.8.18))(vite@5.3.2)
+        version: 0.32.3(@solidjs/router@0.13.6(solid-js@1.8.18))(vite@5.3.3)
       vite-plugin-solid:
         specifier: ^2.10.2
-        version: 2.10.2(solid-js@1.8.18)(vite@5.3.2)
+        version: 2.10.2(solid-js@1.8.18)(vite@5.3.3)
 
 packages:
 
@@ -680,8 +680,8 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn@8.12.0:
-    resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
+  acorn@8.12.1:
+    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -778,8 +778,8 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001639:
-    resolution: {integrity: sha512-eFHflNTBIlFwP2AIKaYuBQN/apnUoKNhBdza8ZnW/h2di4LCZ4xFqYlxUxo+LQ76KFI1PGcC1QDxMbxTZpSCAg==}
+  caniuse-lite@1.0.30001640:
+    resolution: {integrity: sha512-lA4VMpW0PSUrFnkmVuEKBUovSWKhj7puyCg8StBChgu298N1AtuF1sKWEvfDuimSEDbhlb/KqPKC3fs1HbuQUA==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1496,8 +1496,8 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  pkg-types@1.1.2:
-    resolution: {integrity: sha512-VEGf1he2DR5yowYRl0XJhWJq5ktm9gYIsH+y8sNJpHlxch7JPDaufgrsl4vYjd9hMUY8QVjoNncKbow9I7exyA==}
+  pkg-types@1.1.3:
+    resolution: {integrity: sha512-+JrgthZG6m3ckicaOB74TwQ+tBWsFl3qVQg7mN8ulwSOElJ7gBhKzj2VkCPnZ4NlF6kEquYU+RIYNVAvzd54UA==}
 
   possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
@@ -1729,8 +1729,8 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
-  update-browserslist-db@1.0.16:
-    resolution: {integrity: sha512-KVbTxlBYlckhF5wgfyZXTWnMn7MMZjMu9XG8bPlliUOP9ThaF4QnhP8qrjrH7DRzHfSk0oQv1wToW+iA5GajEQ==}
+  update-browserslist-db@1.1.0:
+    resolution: {integrity: sha512-EdRAaAyk2cUE1wOf2DkEhzxqOQvFOoRJFNS6NeyJ01Gp2beMRpBAINjM2iDXE3KCuKhwnvHIQCJm6ThL2Z+HzQ==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -1769,8 +1769,8 @@ packages:
       '@testing-library/jest-dom':
         optional: true
 
-  vite@5.3.2:
-    resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
+  vite@5.3.3:
+    resolution: {integrity: sha512-NPQdeCU0Dv2z5fu+ULotpuq5yfCS1BzKUIPhNbP3YBfAMGJXbt2nS+sbTFu+qchaqWTD+H3JK++nRwr6XIcp6A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -2463,11 +2463,11 @@ snapshots:
       '@typescript-eslint/types': 7.15.0
       eslint-visitor-keys: 3.4.3
 
-  acorn-jsx@5.3.2(acorn@8.12.0):
+  acorn-jsx@5.3.2(acorn@8.12.1):
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
 
-  acorn@8.12.0: {}
+  acorn@8.12.1: {}
 
   ajv@6.12.6:
     dependencies:
@@ -2573,10 +2573,10 @@ snapshots:
 
   browserslist@4.23.1:
     dependencies:
-      caniuse-lite: 1.0.30001639
+      caniuse-lite: 1.0.30001640
       electron-to-chromium: 1.4.816
       node-releases: 2.0.14
-      update-browserslist-db: 1.0.16(browserslist@4.23.1)
+      update-browserslist-db: 1.1.0(browserslist@4.23.1)
 
   builtin-modules@3.3.0: {}
 
@@ -2594,7 +2594,7 @@ snapshots:
 
   callsites@3.1.0: {}
 
-  caniuse-lite@1.0.30001639: {}
+  caniuse-lite@1.0.30001640: {}
 
   chalk@2.4.2:
     dependencies:
@@ -2964,8 +2964,8 @@ snapshots:
 
   espree@10.1.0:
     dependencies:
-      acorn: 8.12.0
-      acorn-jsx: 5.3.2(acorn@8.12.0)
+      acorn: 8.12.1
+      acorn-jsx: 5.3.2(acorn@8.12.1)
       eslint-visitor-keys: 4.0.0
 
   esprima-extract-comments@1.1.0:
@@ -3267,7 +3267,7 @@ snapshots:
   local-pkg@0.5.0:
     dependencies:
       mlly: 1.7.1
-      pkg-types: 1.1.2
+      pkg-types: 1.1.3
 
   locate-path@6.0.0:
     dependencies:
@@ -3306,9 +3306,9 @@ snapshots:
 
   mlly@1.7.1:
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
       pathe: 1.1.2
-      pkg-types: 1.1.2
+      pkg-types: 1.1.3
       ufo: 1.5.3
 
   ms@2.1.2: {}
@@ -3388,7 +3388,7 @@ snapshots:
 
   picomatch@2.3.1: {}
 
-  pkg-types@1.1.2:
+  pkg-types@1.1.3:
     dependencies:
       confbox: 0.1.7
       mlly: 1.7.1
@@ -3513,7 +3513,7 @@ snapshots:
 
   slash@3.0.0: {}
 
-  solid-devtools@0.30.1(solid-js@1.8.18)(vite@5.3.2):
+  solid-devtools@0.30.1(solid-js@1.8.18)(vite@5.3.3):
     dependencies:
       '@babel/core': 7.24.7
       '@babel/plugin-syntax-typescript': 7.24.7(@babel/core@7.24.7)
@@ -3522,7 +3522,7 @@ snapshots:
       '@solid-devtools/shared': 0.13.2(solid-js@1.8.18)
       solid-js: 1.8.18
     optionalDependencies:
-      vite: 5.3.2
+      vite: 5.3.3
     transitivePeerDependencies:
       - supports-color
 
@@ -3659,7 +3659,7 @@ snapshots:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
 
-  update-browserslist-db@1.0.16(browserslist@4.23.1):
+  update-browserslist-db@1.1.0(browserslist@4.23.1):
     dependencies:
       browserslist: 4.23.1
       escalade: 3.1.2
@@ -3671,7 +3671,7 @@ snapshots:
 
   validate-html-nesting@1.2.2: {}
 
-  vite-plugin-pages@0.32.3(@solidjs/router@0.13.6(solid-js@1.8.18))(vite@5.3.2):
+  vite-plugin-pages@0.32.3(@solidjs/router@0.13.6(solid-js@1.8.18))(vite@5.3.3):
     dependencies:
       '@types/debug': 4.1.12
       debug: 4.3.5
@@ -3681,14 +3681,14 @@ snapshots:
       json5: 2.2.3
       local-pkg: 0.5.0
       picocolors: 1.0.1
-      vite: 5.3.2
+      vite: 5.3.3
       yaml: 2.4.5
     optionalDependencies:
       '@solidjs/router': 0.13.6(solid-js@1.8.18)
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-solid@2.10.2(solid-js@1.8.18)(vite@5.3.2):
+  vite-plugin-solid@2.10.2(solid-js@1.8.18)(vite@5.3.3):
     dependencies:
       '@babel/core': 7.24.7
       '@types/babel__core': 7.20.5
@@ -3696,12 +3696,12 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.8.18
       solid-refresh: 0.6.3(solid-js@1.8.18)
-      vite: 5.3.2
-      vitefu: 0.2.5(vite@5.3.2)
+      vite: 5.3.3
+      vitefu: 0.2.5(vite@5.3.3)
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.3.2:
+  vite@5.3.3:
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
@@ -3709,9 +3709,9 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.3.2):
+  vitefu@0.2.5(vite@5.3.3):
     optionalDependencies:
-      vite: 5.3.2
+      vite: 5.3.3
 
   which-boxed-primitive@1.0.2:
     dependencies:
