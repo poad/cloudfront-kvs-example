@@ -8,15 +8,17 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "prettier:check": "prettier --check bin lib",
-    "prettier:fix": "prettier --write bin lib",
-    "eslint:check": "eslint",
-    "eslint:fix": "eslint --fix",
-    "lint": "pnpm run --parallel /^.*:check$/",
-    "lint-fix": "pnpm run /^.*:fix$/"
+    "lint": "eslint",
+    "lint-fix": "eslint --fix"
   },
   "devDependencies": {
+    "@stylistic/eslint-plugin": "^2.7.2",
+    "@stylistic/eslint-plugin-js": "^2.7.2",
+    "@stylistic/eslint-plugin-plus": "^2.7.2",
+    "@stylistic/eslint-plugin-ts": "^2.7.2",
     "@types/node": "^20.16.5",
+    "eslint": "^9.10.0",
+    "eslint-plugin-import": "^2.30.0",
     "aws-cdk": "^2.156.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
