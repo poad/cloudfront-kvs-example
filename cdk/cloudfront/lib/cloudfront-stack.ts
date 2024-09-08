@@ -2,6 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import { compileBundles } from './process/setup';
@@ -36,7 +37,7 @@ export class CloudfrontStack extends cdk.Stack {
       keyValueStoreArn,
       keyValueStoreId: kvsId,
       config: {
-        cloudfront: { comment, originAccessControl },
+        cloudfront: { comment, originAccessControl: oacConfig },
         bucketName,
       },
     } = props;
@@ -54,69 +55,58 @@ export class CloudfrontStack extends cdk.Stack {
     compileBundles({ kvsId });
 
     // CloudFront Functionリソースの定義
-    const functionAssociationsResolver = () => {
-      const { functionConfig } = originAccessControl;
+    const { functionConfig } = oacConfig;
+    const functionName = environment
+      ? `${environment}-${functionConfig.name}`
+      : functionConfig.name;
+    const fn = new cloudfront.Function(this, 'WebsiteIndexPageForwardFunction', {
+          functionName,
+          code: cloudfront.FunctionCode.fromFile({
+            filePath: 'function/index.js',
+          }),
+          runtime: cloudfront.FunctionRuntime.JS_2_0,
+        });
+    (
+      fn.node
+        .defaultChild as cdk.aws_cloudfront.CfnFunction
+    ).addPropertyOverride('FunctionConfig.KeyValueStoreAssociations', [
+      { KeyValueStoreARN: keyValueStoreArn },
+    ]);
+    (
+      fn.node
+        .defaultChild as cdk.aws_cloudfront.CfnFunction
+    ).addPropertyOverride('AutoPublish', 'true');
 
-      const functionName = environment
-        ? `${environment}-${functionConfig.name}`
-        : functionConfig.name;
-      const websiteIndexPageForwardFunction = functionConfig.arn
-        ? cloudfront.Function.fromFunctionAttributes(
-            this,
-            'WebsiteIndexPageForwardFunction',
-            {
-              functionName,
-              functionArn: functionConfig.arn,
-            },
-          )
-        : new cloudfront.Function(this, 'WebsiteIndexPageForwardFunction', {
-            functionName,
-            code: cloudfront.FunctionCode.fromFile({
-              filePath: 'function/index.js',
-            }),
-            runtime: cloudfront.FunctionRuntime.JS_2_0,
-          });
-      (
-        websiteIndexPageForwardFunction.node
-          .defaultChild as cdk.aws_cloudfront.CfnFunction
-      ).addPropertyOverride('FunctionConfig.KeyValueStoreAssociations', [
-        { KeyValueStoreARN: keyValueStoreArn },
-      ]);
-      (
-        websiteIndexPageForwardFunction.node
-          .defaultChild as cdk.aws_cloudfront.CfnFunction
-      ).addPropertyOverride('AutoPublish', 'true');
+    const functionAssociations = [
+      {
+        eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
+        function: fn,
+      },
+    ];
 
-      return [
-        {
-          eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
-          function: websiteIndexPageForwardFunction,
-        },
-      ];
-    };
+    const originAccessControl = new cloudfront.S3OriginAccessControl(
+      this,
+      'OriginAccessControl',
+      {
+        originAccessControlName: oacConfig.functionConfig.name,
+        signing: cloudfront.Signing.SIGV4_NO_OVERRIDE,
+      },
+    );
 
-    const cf = new cloudfront.CloudFrontWebDistribution(this, 'CloudFront', {
+    const cf = new cloudfront.Distribution(this, 'CloudFront', {
       comment,
-      originConfigs: [
-        {
-          s3OriginSource: {
-            s3BucketSource: s3bucket,
-          },
-          behaviors: [
-            {
-              isDefaultBehavior: true,
-              compress: true,
-              functionAssociations: functionAssociationsResolver(),
-              cachedMethods: cloudfront.CloudFrontAllowedCachedMethods.GET_HEAD,
-              viewerProtocolPolicy:
-                cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
-              minTtl: cdk.Duration.seconds(0),
-              maxTtl: cdk.Duration.seconds(86400),
-              defaultTtl: cdk.Duration.seconds(3600),
-            },
-          ],
-        },
-      ],
+      defaultBehavior: {
+        origin: origins.S3BucketOrigin.withOriginAccessControl(s3bucket,
+          {
+            originAccessControl,
+          }
+        ),
+        compress: true,
+        functionAssociations,
+        cachedMethods: cloudfront.CachedMethods.CACHE_GET_HEAD,
+        viewerProtocolPolicy:
+          cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+      },
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
     });
     s3bucket.addToResourcePolicy(
@@ -133,30 +123,6 @@ export class CloudfrontStack extends cdk.Stack {
         },
       }),
     );
-
-    const cfnDistribution = cf.node.defaultChild as cloudfront.CfnDistribution;
-    if (originAccessControl) {
-      const oac = new cloudfront.CfnOriginAccessControl(
-        this,
-        'OriginAccessControl',
-        {
-          originAccessControlConfig: {
-            name: originAccessControl.functionConfig.name,
-            originAccessControlOriginType: 's3',
-            signingBehavior: 'no-override',
-            signingProtocol: 'sigv4',
-          },
-        },
-      );
-      cfnDistribution.addPropertyOverride(
-        'DistributionConfig.Origins.0.OriginAccessControlId',
-        oac.getAtt('Id'),
-      );
-      cfnDistribution.addPropertyOverride(
-        'DistributionConfig.Origins.0.S3OriginConfig.OriginAccessIdentity',
-        '',
-      );
-    }
 
     // eslint-disable-next-line no-new
     new s3deploy.BucketDeployment(this, 'DeployWebsite', {
