@@ -43,8 +43,8 @@ importers:
         specifier: ^3.4.2
         version: 3.4.2
       solid-devtools:
-        specifier: ^0.31.3
-        version: 0.31.3(solid-js@1.9.3)(vite@6.0.3(yaml@2.6.1))
+        specifier: ^0.31.4
+        version: 0.31.4(solid-js@1.9.3)(vite@6.0.3(yaml@2.6.1))
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -1528,8 +1528,8 @@ packages:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
 
-  solid-devtools@0.31.3:
-    resolution: {integrity: sha512-lNuPlmq7kQ/c1enJvAFq0ywAkZ5O0vBnEs+tAo5kyA4eCInZ4PE1b2gxcjHq/reHAfne0nLrL3DQMaYUhjlcEA==}
+  solid-devtools@0.31.4:
+    resolution: {integrity: sha512-uRX8Pv3C7fwdrbI8YoNmNtXelpdA2rZwBG77o8D3iC0XnpSov2s9Ck3BG+LCDKwpn7+QDciRXkBksflhJGhFTA==}
     peerDependencies:
       solid-js: ^1.9.0
       vite: ^2.2.3 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
@@ -3371,7 +3371,7 @@ snapshots:
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
 
-  solid-devtools@0.31.3(solid-js@1.9.3)(vite@6.0.3(yaml@2.6.1)):
+  solid-devtools@0.31.4(solid-js@1.9.3)(vite@6.0.3(yaml@2.6.1)):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.26.0)
