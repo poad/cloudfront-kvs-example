@@ -15,9 +15,7 @@ export const compileBundles = ({ kvsId }: { kvsId: string }) => {
   fs.writeFileSync(path.resolve(functionBasePath, 'index.ts'), handlerCode);
 
   const appBasePath = path.resolve(process.cwd(), '../../app');
-  // biome-ignore lint/complexity/noForEach: <explanation>
   [functionBasePath, appBasePath].forEach((basePath) => {
-    // biome-ignore lint/complexity/noForEach: <explanation>
     fs.readdirSync(basePath, {
       withFileTypes: true,
     })
@@ -34,7 +32,6 @@ export const compileBundles = ({ kvsId }: { kvsId: string }) => {
         }
       });
 
-    // biome-ignore lint/complexity/noForEach: <explanation>
     ['pwd', 'pnpm install', 'pnpm build'].forEach((cmd) => {
       childProcess.execSync(cmd, {
         cwd: path.resolve(basePath),
