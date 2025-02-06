@@ -12,10 +12,11 @@
     "lint-fix": "eslint --fix"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2.13.0",
-    "@stylistic/eslint-plugin-js": "^2.13.0",
-    "@stylistic/eslint-plugin-plus": "^2.13.0",
-    "@stylistic/eslint-plugin-ts": "^2.13.0",
+    "@eslint/js": "^9.19.0",
+    "@stylistic/eslint-plugin": "^3.0.1",
+    "@stylistic/eslint-plugin-js": "^3.0.1",
+    "@stylistic/eslint-plugin-plus": "^3.0.1",
+    "@stylistic/eslint-plugin-ts": "^3.0.1",
     "@types/node": "^20.17.17",
     "aws-cdk": "^2.178.0",
     "eslint": "~9.14.0",

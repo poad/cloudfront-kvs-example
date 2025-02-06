@@ -8,12 +8,14 @@
     "build": "pnpm run -r --parallel build"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2.13.0",
-    "@stylistic/eslint-plugin-js": "^2.13.0",
-    "@stylistic/eslint-plugin-plus": "^2.13.0",
-    "@stylistic/eslint-plugin-ts": "^2.13.0",
+    "@eslint/js": "^9.19.0",
+    "@stylistic/eslint-plugin": "^3.0.1",
+    "@stylistic/eslint-plugin-js": "^3.0.1",
+    "@stylistic/eslint-plugin-plus": "^3.0.1",
+    "@stylistic/eslint-plugin-ts": "^3.0.1",
     "eslint": "^9.19.0",
     "eslint-plugin-import": "^2.31.0",
+    "pnpm": "^10.2.0",
     "typescript-eslint": "^8.23.0"
   },
   "packageManager": "pnpm@10.2.0+sha512.0d27364e0139c6aadeed65ada153135e0ca96c8da42123bd50047f961339dc7a758fc2e944b428f52be570d1bd3372455c1c65fa2e7aa0bfbf931190f9552001"
