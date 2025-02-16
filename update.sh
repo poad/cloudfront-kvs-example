@@ -21,7 +21,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-corepack use pnpm@latest-10 && pnpm install && pnpm up -r
+pnpm install && pnpm up -r
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
@@ -36,7 +36,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-corepack use pnpm@latest-10 && pnpm install && pnpm up -r
+pnpm install && pnpm up -r
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
