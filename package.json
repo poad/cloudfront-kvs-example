@@ -1,0 +1,41 @@
+{
+  "name": "cloudfront-kvs-example",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "lint": "pnpm -r --parallel --if-present lint",
+    "lint-fix": "pnpm -r --parallel --if-present lint-fix",
+    "build": "pnpm run -r --parallel build"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.7",
+    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.21.0",
+    "@stylistic/eslint-plugin": "^4.0.1",
+    "@stylistic/eslint-plugin-js": "^4.0.1",
+    "@stylistic/eslint-plugin-jsx": "^4.0.1",
+    "@stylistic/eslint-plugin-plus": "^4.0.1",
+    "@stylistic/eslint-plugin-ts": "^4.0.1",
+    "eslint": "~9.20.1",
+    "eslint-import-resolver-typescript": "^3.8.3",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-solid": "^0.14.5",
+    "pnpm": "^10.4.1",
+    "typescript-eslint": "^8.24.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": ">=0.25.0"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+}
