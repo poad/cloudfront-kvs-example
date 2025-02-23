@@ -4,6 +4,7 @@
   "bin": {
     "cloudfront": "bin/cloudfront.js"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -13,16 +14,15 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@ppodds/mustache": "^5",
     "@stylistic/eslint-plugin": "^4.0.1",
     "@stylistic/eslint-plugin-js": "^4.0.1",
     "@stylistic/eslint-plugin-plus": "^4.0.1",
     "@stylistic/eslint-plugin-ts": "^4.0.1",
-    "@types/mustache": "^4.2.5",
     "@types/node": "^22.13.5",
     "aws-cdk": "^2.1000.2",
     "eslint": "~9.21.0",
     "eslint-plugin-import": "^2.31.0",
-    "mustache": "^4.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },

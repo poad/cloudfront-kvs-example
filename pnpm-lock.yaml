@@ -133,6 +133,9 @@ importers:
       '@eslint/js':
         specifier: ^9.21.0
         version: 9.21.0
+      '@ppodds/mustache':
+        specifier: ^5
+        version: 5.0.0
       '@stylistic/eslint-plugin':
         specifier: ^4.0.1
         version: 4.0.1(eslint@9.21.0)(typescript@5.7.3)
@@ -145,9 +148,6 @@ importers:
       '@stylistic/eslint-plugin-ts':
         specifier: ^4.0.1
         version: 4.0.1(eslint@9.21.0)(typescript@5.7.3)
-      '@types/mustache':
-        specifier: ^4.2.5
-        version: 4.2.5
       '@types/node':
         specifier: ^22.13.5
         version: 22.13.5
@@ -160,9 +160,52 @@ importers:
       eslint-plugin-import:
         specifier: ^2.31.0
         version: 2.31.0(@typescript-eslint/parser@8.24.1(eslint@9.20.1)(typescript@5.7.3))(eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0)(eslint@9.20.1))(eslint@9.21.0)
-      mustache:
-        specifier: ^4.2.0
-        version: 4.2.0
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@22.13.5)(typescript@5.7.3)
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  cdk/kvs:
+    dependencies:
+      aws-cdk-lib:
+        specifier: ^2.180.0
+        version: 2.180.0(constructs@10.4.2)
+      constructs:
+        specifier: ^10.4.2
+        version: 10.4.2
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.21.0
+        version: 9.21.0
+      '@stylistic/eslint-plugin':
+        specifier: ^4.0.1
+        version: 4.0.1(eslint@9.21.0)(typescript@5.7.3)
+      '@stylistic/eslint-plugin-js':
+        specifier: ^4.0.1
+        version: 4.0.1(eslint@9.21.0)
+      '@stylistic/eslint-plugin-plus':
+        specifier: ^4.0.1
+        version: 4.0.1(eslint@9.21.0)
+      '@stylistic/eslint-plugin-ts':
+        specifier: ^4.0.1
+        version: 4.0.1(eslint@9.21.0)(typescript@5.7.3)
+      '@types/node':
+        specifier: ^22.13.5
+        version: 22.13.5
+      aws-cdk:
+        specifier: ^2.1000.2
+        version: 2.1000.2
+      eslint:
+        specifier: ~9.21.0
+        version: 9.21.0
+      eslint-plugin-import:
+        specifier: ^2.31.0
+        version: 2.31.0(@typescript-eslint/parser@8.24.1(eslint@9.20.1)(typescript@5.7.3))(eslint-import-resolver-typescript@3.8.3(eslint-plugin-import@2.31.0)(eslint@9.20.1))(eslint@9.21.0)
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.13.5)(typescript@5.7.3)
@@ -552,6 +595,9 @@ packages:
   '@nothing-but/utils@0.17.0':
     resolution: {integrity: sha512-TuCHcHLOqDL0SnaAxACfuRHBNRgNJcNn9X0GiH5H3YSDBVquCr3qEIG3FOQAuMyZCbu9w8nk2CHhOsn7IvhIwQ==}
 
+  '@ppodds/mustache@5.0.0':
+    resolution: {integrity: sha512-mhOS7sJWcL7FSN1SPSnyKRW9lYca5SB15pZRdJF9H7h6OnRjgzZecpj/+1Bm0TZXIXizLwKRYHJAntj4m2FqKg==}
+
   '@rollup/rollup-android-arm-eabi@4.34.8':
     resolution: {integrity: sha512-q217OSE8DTp8AFHuNHXo0Y86e1wtlfVrXiAlwkIvGRQv9zbc6mE3sjIVfwI8sYUyNxwOg0j/Vm1RKM04JcWLJw==}
     cpu: [arm]
@@ -802,9 +848,6 @@ packages:
 
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
-
-  '@types/mustache@4.2.5':
-    resolution: {integrity: sha512-PLwiVvTBg59tGFL/8VpcGvqOu3L4OuveNvPi0EYbWchRdEVP++yRUXJPFl+CApKEq13017/4Nf7aQ5lTtHUNsA==}
 
   '@types/node@22.13.5':
     resolution: {integrity: sha512-+lTU0PxZXn0Dr1NBtC7Y8cR21AJr87dLLU953CWA6pMxxv/UDc7jYAY90upcrie1nRcD6XNG5HOYEDtgW5TxAg==}
@@ -1633,10 +1676,6 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  mustache@4.2.0:
-    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
-    hasBin: true
-
   nanoid@3.3.8:
     resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -2463,6 +2502,8 @@ snapshots:
 
   '@nothing-but/utils@0.17.0': {}
 
+  '@ppodds/mustache@5.0.0': {}
+
   '@rollup/rollup-android-arm-eabi@4.34.8':
     optional: true
 
@@ -2757,8 +2798,6 @@ snapshots:
   '@types/json5@0.0.29': {}
 
   '@types/ms@2.1.0': {}
-
-  '@types/mustache@4.2.5': {}
 
   '@types/node@22.13.5':
     dependencies:
@@ -3860,8 +3899,6 @@ snapshots:
       ufo: 1.5.4
 
   ms@2.1.3: {}
-
-  mustache@4.2.0: {}
 
   nanoid@3.3.8: {}
 

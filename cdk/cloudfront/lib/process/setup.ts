@@ -1,9 +1,9 @@
 import * as childProcess from 'node:child_process';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import * as mustache from 'mustache';
+import * as mustache from '@ppodds/mustache';
 
-export const compileBundles = ({ kvsId }: { kvsId: string }) => {
+export function compileBundles({ kvsId }: { kvsId: string }) {
   const functionBasePath = path.relative(process.cwd(), 'function');
   const template = fs.readFileSync(
     path.resolve(functionBasePath, 'index.template.ts'),

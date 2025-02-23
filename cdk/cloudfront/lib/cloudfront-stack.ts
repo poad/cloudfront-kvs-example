@@ -124,7 +124,6 @@ export class CloudfrontStack extends cdk.Stack {
       }),
     );
 
-    // eslint-disable-next-line no-new
     new s3deploy.BucketDeployment(this, 'DeployWebsite', {
       sources: [s3deploy.Source.asset(`${process.cwd()}/../../app/dist`)],
       destinationBucket: s3bucket,
@@ -132,7 +131,6 @@ export class CloudfrontStack extends cdk.Stack {
       exclude: ['.DS_Store', '*/.DS_Store'],
     });
 
-    // eslint-disable-next-line no-new
     new cdk.CfnOutput(this, 'AccessURLOutput', {
       value: `https://${cf.distributionDomainName}`,
     });

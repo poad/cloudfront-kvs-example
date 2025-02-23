@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error ignore type error
 import cf from 'cloudfront';
 
 const kvsId = '{{ kvsID }}';
@@ -13,6 +13,7 @@ interface CloudFrontRequestEvent {
 
 const kvsHandle = cf.kvs(kvsId);
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function handler(event: CloudFrontRequestEvent) {
   const request = event.request;
   const pathSegments = request.uri.split('/')
@@ -24,7 +25,7 @@ async function handler(event: CloudFrontRequestEvent) {
       const newUri = pathSegments.join('/');
       console.log(`${request.uri} -> ${newUri}`)
       request.uri = newUri;
-  } catch (err) {
+  } catch {
     const uri = request.uri;
 
     // Check whether the URI is missing a file name.

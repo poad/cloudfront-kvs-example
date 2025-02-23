@@ -4,6 +4,7 @@
   "bin": {
     "kvs": "bin/kvs.js"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -12,7 +13,7 @@
     "lint-fix": "eslint --fix"
   },
   "devDependencies": {
-    "@eslint/js": "^9.20.0",
+    "@eslint/js": "^9.21.0",
     "@stylistic/eslint-plugin": "^4.0.1",
     "@stylistic/eslint-plugin-js": "^4.0.1",
     "@stylistic/eslint-plugin-plus": "^4.0.1",
