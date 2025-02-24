@@ -134,7 +134,7 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       '@ppodds/mustache':
-        specifier: ^5
+        specifier: ^5.0.0
         version: 5.0.0
       '@stylistic/eslint-plugin':
         specifier: ^4.0.1
