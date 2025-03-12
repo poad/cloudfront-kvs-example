@@ -121,8 +121,8 @@ importers:
   cdk/cloudfront:
     dependencies:
       aws-cdk-lib:
-        specifier: ^2.182.0
-        version: 2.182.0(constructs@10.4.2)
+        specifier: ^2.183.0
+        version: 2.183.0(constructs@10.4.2)
       constructs:
         specifier: ^10.4.2
         version: 10.4.2
