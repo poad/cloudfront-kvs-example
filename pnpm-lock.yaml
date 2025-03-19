@@ -51,8 +51,8 @@ importers:
         specifier: ^0.14.5
         version: 0.14.5(eslint@9.20.1)(typescript@5.8.2)
       pnpm:
-        specifier: ^10.6.4
-        version: 10.6.4
+        specifier: ^10.6.5
+        version: 10.6.5
       typescript-eslint:
         specifier: ^8.26.1
         version: 8.26.1(eslint@9.20.1)(typescript@5.8.2)
@@ -94,8 +94,8 @@ importers:
         specifier: ^0.14.5
         version: 0.14.5(eslint@9.22.0)(typescript@5.8.2)
       pnpm:
-        specifier: ^10.6.4
-        version: 10.6.4
+        specifier: ^10.6.5
+        version: 10.6.5
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -152,8 +152,8 @@ importers:
         specifier: ^22.13.10
         version: 22.13.10
       aws-cdk:
-        specifier: ^2.1004.0
-        version: 2.1004.0
+        specifier: ^2.1005.0
+        version: 2.1005.0
       eslint:
         specifier: ~9.22.0
         version: 9.22.0
@@ -1056,6 +1056,11 @@ packages:
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
+  aws-cdk@2.1005.0:
+    resolution: {integrity: sha512-4ejfGGrGCEl0pg1xcqkxK0lpBEZqNI48wtrXhk6dYOFYPYMZtqn1kdla29ONN+eO2unewkNF4nLP1lPYhlf9Pg==}
+    engines: {node: '>= 14.15.0'}
+    hasBin: true
+
   babel-plugin-jsx-dom-expressions@0.39.7:
     resolution: {integrity: sha512-8GzVmFla7jaTNWW8W+lTMl9YGva4/06CtwJjySnkYtt8G1v9weCzc2SuF1DfrudcCNb2Doetc1FRg33swBYZCA==}
     peerDependencies:
@@ -1843,8 +1848,8 @@ packages:
   pkg-types@2.1.0:
     resolution: {integrity: sha512-wmJwA+8ihJixSoHKxZJRBQG1oY8Yr9pGLzRmSsNms0iNWyHHAlZCa7mmKiFR10YPZuz/2k169JiS/inOjBCZ2A==}
 
-  pnpm@10.6.4:
-    resolution: {integrity: sha512-2j1xW/0iqaEF5ugIjPx4JmmTMt7WDEI7FOxhOhhfFgIgZwL/D+TEOMsVyXkIHOTLAlaONksVF0UDpjx6jipfbA==}
+  pnpm@10.6.5:
+    resolution: {integrity: sha512-zfko/KIIMs1Z7FOCZJK33CXcUk1DcLa0rb9lgD0y76psHIgUfArk6NV5psnuxxV1e1DU+jXuoXnYaOraTtBDrw==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -3168,6 +3173,10 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.2
 
+  aws-cdk@2.1005.0:
+    optionalDependencies:
+      fsevents: 2.3.2
+
   babel-plugin-jsx-dom-expressions@0.39.7(@babel/core@7.26.10):
     dependencies:
       '@babel/core': 7.26.10
@@ -4145,7 +4154,7 @@ snapshots:
       exsolve: 1.0.4
       pathe: 2.0.3
 
-  pnpm@10.6.4: {}
+  pnpm@10.6.5: {}
 
   possible-typed-array-names@1.1.0: {}
 
