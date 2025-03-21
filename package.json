@@ -27,7 +27,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-solid": "^0.14.5",
     "pnpm": "^10.6.5",
-    "typescript-eslint": "^8.26.1"
+    "typescript-eslint": "^8.27.0"
   },
   "pnpm": {
     "overrides": {
