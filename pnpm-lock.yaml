@@ -94,8 +94,8 @@ importers:
         specifier: ^0.14.5
         version: 0.14.5(eslint@9.23.0)(typescript@5.8.2)
       pnpm:
-        specifier: ^10.6.5
-        version: 10.6.5
+        specifier: ^10.7.0
+        version: 10.7.0
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -152,8 +152,8 @@ importers:
         specifier: ^22.13.13
         version: 22.13.13
       aws-cdk:
-        specifier: ^2.1005.0
-        version: 2.1005.0
+        specifier: ^2.1006.0
+        version: 2.1006.0
       eslint:
         specifier: ~9.23.0
         version: 9.23.0
@@ -198,8 +198,8 @@ importers:
         specifier: ^22.13.13
         version: 22.13.13
       aws-cdk:
-        specifier: ^2.1005.0
-        version: 2.1005.0
+        specifier: ^2.1006.0
+        version: 2.1006.0
       eslint:
         specifier: ~9.23.0
         version: 9.23.0
@@ -1059,8 +1059,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.1005.0:
-    resolution: {integrity: sha512-4ejfGGrGCEl0pg1xcqkxK0lpBEZqNI48wtrXhk6dYOFYPYMZtqn1kdla29ONN+eO2unewkNF4nLP1lPYhlf9Pg==}
+  aws-cdk@2.1006.0:
+    resolution: {integrity: sha512-6qYnCt4mBN+3i/5F+FC2yMETkDHY/IL7gt3EuqKVPcaAO4jU7oXfVSlR60CYRkZWL4fnAurUV14RkJuJyVG/IA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
@@ -1853,6 +1853,11 @@ packages:
 
   pnpm@10.6.5:
     resolution: {integrity: sha512-zfko/KIIMs1Z7FOCZJK33CXcUk1DcLa0rb9lgD0y76psHIgUfArk6NV5psnuxxV1e1DU+jXuoXnYaOraTtBDrw==}
+    engines: {node: '>=18.12'}
+    hasBin: true
+
+  pnpm@10.7.0:
+    resolution: {integrity: sha512-a4Za1LYqHZhCth1nSjk5A7hx2SRJVPZSuIQsK1U8chdrJ49kxGPlLUD/+KujhcI1yMns9cx95P14uLttSWM6tg==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -3177,7 +3182,7 @@ snapshots:
       '@aws-cdk/cloud-assembly-schema': 40.7.0
       constructs: 10.4.2
 
-  aws-cdk@2.1005.0:
+  aws-cdk@2.1006.0:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -4159,6 +4164,8 @@ snapshots:
       pathe: 2.0.3
 
   pnpm@10.6.5: {}
+
+  pnpm@10.7.0: {}
 
   possible-typed-array-names@1.1.0: {}
 
