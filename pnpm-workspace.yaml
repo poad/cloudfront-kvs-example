@@ -4,4 +4,5 @@ packages:
   - cdk/kvs
 
 onlyBuiltDependencies:
+  - esbuild
   - unrs-resolver
