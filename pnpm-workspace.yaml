@@ -2,3 +2,6 @@ packages:
   - app
   - cdk/cloudfront
   - cdk/kvs
+
+onlyBuiltDependencies:
+  - unrs-resolver
