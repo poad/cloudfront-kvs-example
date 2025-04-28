@@ -23,7 +23,7 @@
 		"eslint": "^9.25.1",
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-solid": "^0.14.5",
-		"pnpm": "^10.9.0",
+		"pnpm": "^10.10.0",
 		"prettier": "^3.5.3",
 		"solid-devtools": "^0.34.0",
 		"typescript": "^5.8.3",
