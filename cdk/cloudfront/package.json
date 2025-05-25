@@ -15,10 +15,10 @@
   "devDependencies": {
     "@eslint/js": "^9.27.0",
     "@ppodds/mustache": "^5.0.0",
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "@stylistic/eslint-plugin-js": "^4.2.0",
-    "@stylistic/eslint-plugin-plus": "^4.2.0",
-    "@stylistic/eslint-plugin-ts": "^4.2.0",
+    "@stylistic/eslint-plugin": "^4.4.0",
+    "@stylistic/eslint-plugin-js": "^4.4.0",
+    "@stylistic/eslint-plugin-plus": "^4.4.0",
+    "@stylistic/eslint-plugin-ts": "^4.4.0",
     "@types/node": "^22.15.21",
     "aws-cdk": "^2.1016.1",
     "eslint": "~9.27.0",
@@ -27,7 +27,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.197.0",
+    "aws-cdk-lib": "^2.198.0",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21"
   }
