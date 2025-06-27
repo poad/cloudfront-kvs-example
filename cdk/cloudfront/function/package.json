@@ -5,12 +5,12 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "lint": "eslint --ext .ts lambda bin lib",
+    "lint": "eslint",
     "style-check": "prettier --write lambda bin lib",
     "format": "prettier --write lambda bin lib",
-    "fix": "prettier --write lambda bin lib && eslint --fix --ext .ts lambda bin lib"
+    "fix": "prettier --write lambda bin lib && eslint --fix"
   },
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "^5.8.3"
   }
 }

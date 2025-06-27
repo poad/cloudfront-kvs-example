@@ -1,6 +1,7 @@
 packages:
   - app
   - cdk/cloudfront
+  - cdk/cloudfront/function
   - cdk/kvs
 
 onlyBuiltDependencies:
