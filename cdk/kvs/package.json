@@ -15,8 +15,8 @@
   "devDependencies": {
     "@eslint/js": "^9.35.0",
     "@stylistic/eslint-plugin": "^5.3.1",
-    "@types/node": "^24.5.0",
-    "aws-cdk": "^2.1029.1",
+    "@types/node": "^24.5.1",
+    "aws-cdk": "^2.1029.2",
     "eslint": "~9.35.0",
     "eslint-plugin-import": "^2.32.0",
     "ts-node": "^10.9.2",
