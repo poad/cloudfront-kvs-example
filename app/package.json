@@ -19,11 +19,11 @@
 		"eslint": "^9.38.0",
 		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-solid": "^0.14.5",
-		"pnpm": "^10.18.3",
+		"pnpm": "^10.19.0",
 		"prettier": "^3.6.2",
 		"solid-devtools": "^0.34.4",
 		"typescript": "^5.9.3",
-		"typescript-eslint": "^8.46.1",
+		"typescript-eslint": "^8.46.2",
 		"vite": "^7.1.11",
 		"vite-plugin-pages": "^0.33.1",
 		"vite-plugin-solid": "^2.11.9"
