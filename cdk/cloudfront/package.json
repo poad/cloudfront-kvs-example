@@ -20,7 +20,7 @@
     "@stylistic/eslint-plugin-plus": "^4.4.1",
     "@stylistic/eslint-plugin-ts": "^4.4.1",
     "@types/node": "^25.3.0",
-    "aws-cdk": "^2.1106.1",
+    "aws-cdk": "^2.1107.0",
     "eslint": "~10.0.1",
     "eslint-plugin-import": "^2.32.0",
     "ts-node": "^10.9.2",
