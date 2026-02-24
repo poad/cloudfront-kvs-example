@@ -17,13 +17,13 @@
     "@stylistic/eslint-plugin": "^5.9.0",
     "@types/node": "^25.3.0",
     "aws-cdk": "^2.1107.0",
-    "eslint": "~10.0.1",
+    "eslint": "~10.0.2",
     "eslint-plugin-import": "^2.32.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.239.0",
+    "aws-cdk-lib": "^2.240.0",
     "constructs": "^10.5.1",
     "source-map-support": "^0.5.21"
   }
