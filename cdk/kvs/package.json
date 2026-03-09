@@ -16,7 +16,7 @@
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^25.3.5",
-    "aws-cdk": "^2.1109.0",
+    "aws-cdk": "^2.1110.0",
     "eslint": "~10.0.3",
     "eslint-plugin-import": "^2.32.0",
     "ts-node": "^10.9.2",
