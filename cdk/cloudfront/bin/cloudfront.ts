@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { CloudfrontStack, Config } from '../lib/cloudfront-stack';
+import { CloudfrontStack, Config } from '../lib/cloudfront-stack.js';
 
 const app = new cdk.App();
 const keyValueStoreArn = app.node.tryGetContext('kvs-arn') as string;
