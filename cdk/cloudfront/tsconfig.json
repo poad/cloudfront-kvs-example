@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "nodenext",
     "lib": [
       "esnext",
       "dom"
     ],
-    "moduleResolution":"node",
+    "moduleResolution":"nodenext",
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,
@@ -23,6 +23,11 @@
     "strictPropertyInitialization": false,
     "typeRoots": [
       "./node_modules/@types"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "types": [
+      "node"
     ]
   },
   "include": ["/**/*.ts"],
