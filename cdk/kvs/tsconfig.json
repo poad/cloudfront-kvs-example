@@ -2,12 +2,13 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "nodenext",
     "lib": [
       "esnext",
       "dom"
     ],
-    "moduleResolution":"node",
+    "moduleResolution":"nodenext",
+    "noEmit": true,
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,
@@ -24,6 +25,9 @@
     "strictPropertyInitialization": false,
     "typeRoots": [
       "./node_modules/@types"
+    ],
+    "types": [
+      "node"
     ]
   },
   "include": ["/**/*.ts"],
