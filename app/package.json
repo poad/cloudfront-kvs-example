@@ -21,7 +21,7 @@
 		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-solid": "^0.14.5",
 		"solid-devtools": "^0.34.5",
-		"typescript": "^5.9.3",
+		"typescript": "^6.0.2",
 		"typescript-eslint": "^8.57.2",
 		"vite": "^8.0.2",
 		"vite-plugin-pages": "^0.33.3",
