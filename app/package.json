@@ -16,7 +16,7 @@
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@stylistic/eslint-plugin": "^5.10.0",
-		"eslint": "^10.3.0",
+		"eslint": "^10.4.0",
 		"eslint-import-resolver-typescript": "^4.4.4",
 		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-solid": "^0.14.5",
@@ -29,6 +29,6 @@
 	},
 	"dependencies": {
 		"@solidjs/router": "^0.16.1",
-		"solid-js": "^1.9.12"
+		"solid-js": "^1.9.13"
 	}
 }
