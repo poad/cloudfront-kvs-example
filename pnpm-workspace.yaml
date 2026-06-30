@@ -10,9 +10,7 @@ allowBuilds:
 
 minimumReleaseAge: 10080 # 7 days in minutes
 minimumReleaseAgeExclude:
-  - typescript-eslint@8.61.1
-
-  - pnpm@11.7.0
+  - pnpm@11.9.0
 
 overrides:
   brace-expansion@<1.1.13: '>=1.1.13'
