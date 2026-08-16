@@ -1,3 +1,4 @@
+import { compileBundles } from './process/setup.js';
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
@@ -5,7 +6,6 @@ import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
-import { compileBundles } from './process/setup.js';
 
 export interface Config {
   bucketName: string;
@@ -22,10 +22,10 @@ export interface Config {
 }
 
 interface CloudfrontStackProps extends cdk.StackProps {
-  keyValueStoreArn: string;
-  keyValueStoreId: string;
-  environment?: string;
-  config: Config;
+  readonly keyValueStoreArn: string;
+  readonly keyValueStoreId: string;
+  readonly environment?: string;
+  readonly config: Config;
 }
 
 export class CloudfrontStack extends cdk.Stack {
@@ -60,12 +60,12 @@ export class CloudfrontStack extends cdk.Stack {
       ? `${environment}-${functionConfig.name}`
       : functionConfig.name;
     const fn = new cloudfront.Function(this, 'WebsiteIndexPageForwardFunction', {
-          functionName,
-          code: cloudfront.FunctionCode.fromFile({
-            filePath: 'function/index.js',
-          }),
-          runtime: cloudfront.FunctionRuntime.JS_2_0,
-        });
+      functionName,
+      code: cloudfront.FunctionCode.fromFile({
+        filePath: 'function/index.js',
+      }),
+      runtime: cloudfront.FunctionRuntime.JS_2_0,
+    });
     (
       fn.node
         .defaultChild as cdk.aws_cloudfront.CfnFunction
@@ -99,7 +99,7 @@ export class CloudfrontStack extends cdk.Stack {
         origin: origins.S3BucketOrigin.withOriginAccessControl(s3bucket,
           {
             originAccessControl,
-          }
+          },
         ),
         compress: true,
         functionAssociations,

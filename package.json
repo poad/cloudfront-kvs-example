@@ -12,17 +12,6 @@
     "lint-fix": "pnpm -r --parallel --if-present lint-fix",
     "build": "pnpm run -r --parallel build"
   },
-  "devDependencies": {
-    "@eslint/compat": "^2.1.0",
-    "@eslint/eslintrc": "^3.3.6",
-    "@eslint/js": "^10.0.1",
-    "@stylistic/eslint-plugin": "^5.10.0",
-    "eslint": "^10.8.0",
-    "eslint-import-resolver-typescript": "^4.4.5",
-    "eslint-plugin-import": "^2.32.0",
-    "jiti": "^2.7.0",
-    "typescript-eslint": "^8.65.0"
-  },
   "devEngines": {
     "runtime": {
       "name": "node",
@@ -31,8 +20,9 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "^11.21.0",
+      "version": "^11.22.0",
       "onFail": "download"
     }
-  }
+  },
+  "devDependencies": {}
 }

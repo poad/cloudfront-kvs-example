@@ -3,8 +3,8 @@ import { Construct } from 'constructs';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 
 export interface KvsStackProps extends cdk.StackProps {
-  name: string;
-  comment: string;
+  readonly name: string;
+  readonly comment: string;
 }
 
 export class KvsStack extends cdk.Stack {

@@ -33,6 +33,7 @@
   "include": ["/**/*.ts"],
   "exclude": [
     "node_modules",
-    "cdk.out"
+    "cdk.out",
+    "eslint.config.ts"
   ]
 }

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import * as cdk from 'aws-cdk-lib';
 import { KvsStack } from '../lib/kvs-stack.js';
+import * as cdk from 'aws-cdk-lib';
 
 const app = new cdk.App();
-new KvsStack(app, 'cloudfront-kvs-example-kvs-stack', {
+new KvsStack(app, 'CloudfrontKvsExampleKvs', {
   name: 'kvs-example',
   comment: 'example',
 });

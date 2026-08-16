@@ -6,7 +6,7 @@ import pages from 'vite-plugin-pages';
 
 export default defineConfig({
   plugins: [pages({
-    extensions: ["tsx", "jsx"],
+    extensions: ['tsx', 'jsx'],
     importMode: 'async',
   }), solidPlugin()],
   build: {
@@ -14,5 +14,5 @@ export default defineConfig({
   },
   resolve: {
     conditions: ['development', 'browser'],
-  }
+  },
 });
