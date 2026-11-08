@@ -1,9 +1,7 @@
 {
   "app": "pnx tsx bin/cloudfront.ts",
   "watch": {
-    "include": [
-      "**"
-    ],
+    "include": ["**"],
     "exclude": [
       "README.md",
       "cdk*.json",

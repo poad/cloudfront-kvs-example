@@ -1,11 +1,11 @@
 import { compileBundles } from './process/setup.js';
 import * as cdk from 'aws-cdk-lib';
-import { Construct } from 'constructs';
-import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
+import { Construct } from 'constructs';
 
 export interface Config {
   bucketName: string;
@@ -59,22 +59,24 @@ export class CloudfrontStack extends cdk.Stack {
     const functionName = environment
       ? `${environment}-${functionConfig.name}`
       : functionConfig.name;
-    const fn = new cloudfront.Function(this, 'WebsiteIndexPageForwardFunction', {
-      functionName,
-      code: cloudfront.FunctionCode.fromFile({
-        filePath: 'function/index.js',
-      }),
-      runtime: cloudfront.FunctionRuntime.JS_2_0,
-    });
+    const fn = new cloudfront.Function(
+      this,
+      'WebsiteIndexPageForwardFunction',
+      {
+        functionName,
+        code: cloudfront.FunctionCode.fromFile({
+          filePath: 'function/index.js',
+        }),
+        runtime: cloudfront.FunctionRuntime.JS_2_0,
+      },
+    );
     (
-      fn.node
-        .defaultChild as cdk.aws_cloudfront.CfnFunction
+      fn.node.defaultChild as cdk.aws_cloudfront.CfnFunction
     ).addPropertyOverride('FunctionConfig.KeyValueStoreAssociations', [
       { KeyValueStoreARN: keyValueStoreArn },
     ]);
     (
-      fn.node
-        .defaultChild as cdk.aws_cloudfront.CfnFunction
+      fn.node.defaultChild as cdk.aws_cloudfront.CfnFunction
     ).addPropertyOverride('AutoPublish', 'true');
 
     const functionAssociations = [
@@ -96,16 +98,13 @@ export class CloudfrontStack extends cdk.Stack {
     const cf = new cloudfront.Distribution(this, 'CloudFront', {
       comment,
       defaultBehavior: {
-        origin: origins.S3BucketOrigin.withOriginAccessControl(s3bucket,
-          {
-            originAccessControl,
-          },
-        ),
+        origin: origins.S3BucketOrigin.withOriginAccessControl(s3bucket, {
+          originAccessControl,
+        }),
         compress: true,
         functionAssociations,
         cachedMethods: cloudfront.CachedMethods.CACHE_GET_HEAD,
-        viewerProtocolPolicy:
-          cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+        viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       },
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
     });

@@ -41,4 +41,4 @@ export function compileBundles({ kvsId }: { kvsId: string }) {
       });
     });
   });
-};
+}

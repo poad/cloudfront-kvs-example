@@ -22,7 +22,7 @@ fi
 echo ""
 pwd
 
-if ! (pnx -y pnpm@latest self-update && pnpm install && pnpm up -r && pnpm audit --fix override && pnpm up -r && pnpm -r lint && pnpm build && pnpm install -r --no-frozen-lockfile); then
+if ! (pnx -y pnpm@latest self-update && pnpm install && pnpm up -r --include-github-actions -L && pnpm audit --fix override && pnpm up -r && pnpm -r lint && pnpm build && pnpm install -r --no-frozen-lockfile); then
   cd "${CUR}" || exit
   exit $result
 fi

@@ -8,7 +8,7 @@ updates:
     allow:
       - dependency-type: all
     cooldown:
-      default-days: 3
+      default-days: 7
     rebase-strategy: auto
     assignees:
       - poad
@@ -19,9 +19,10 @@ updates:
 
   - package-ecosystem: npm
     directories:
-      - '/cdk/'
+      - '/'
       - '/cdk/kvs/'
       - '/cdk/cloudfront/'
+      - '/cdk/cloudfront/function/'
       - '/app/'
     schedule:
       interval: daily

@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "ignorePatterns": [
+    "**/*.d.ts",
+    "out",
+    "cdk.out",
+    "**/generated/**",
+    "**/*.js"
+  ],
+  "plugins": ["typescript", "promise"],
+  "jsPlugins": ["eslint-plugin-boundaries", "eslint-plugin-solid"],
+  "rules": {
+    "promise/always-return": "error",
+    "promise/no-new-statics": "error",
+    "solid/reactivity": "warn",
+    "solid/no-destructure": "error",
+    "solid/jsx-no-undef": "error"
+  }
+}
