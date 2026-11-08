@@ -6,7 +6,7 @@ export default function Test() {
     <>
       <h1>{id}</h1>
       <p>
-        <A href="/">HOME</A>
+        <A href='/'>HOME</A>
       </p>
     </>
   );

@@ -5,7 +5,7 @@ export default function About() {
     <>
       <h1>Hello World</h1>
       <p>
-        <A href="/">HOME</A>
+        <A href='/'>HOME</A>
       </p>
     </>
   );
