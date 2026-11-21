@@ -1,8 +1,8 @@
 /// <reference types="vite/client" />
 
+import solidPlugin from '@solidjs/vite-plugin';
 import { defineConfig } from 'vite';
 import pages from 'vite-plugin-pages';
-import solidPlugin from 'vite-plugin-solid';
 
 export default defineConfig({
   plugins: [
