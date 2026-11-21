@@ -1,5 +1,5 @@
-import { Router } from '@solidjs/router';
-import { render } from 'solid-js/web';
+import { createRouter } from '@solidjs/router';
+import { render } from '@solidjs/web';
 import routes from '~solid-pages';
 
 const root = document.getElementById('root');
@@ -10,6 +10,10 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
+const Router = createRouter({
+  routes,
+});
+
 if (root) {
-  render(() => <Router>{routes}</Router>, root);
+  render(() => <Router>{(props) => props.children}</Router>, root);
 }
