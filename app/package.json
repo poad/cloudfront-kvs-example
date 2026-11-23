@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@solidjs/vite-plugin": "^3.0.1",
-    "eslint-plugin-boundaries": "^7.4.3",
+    "eslint-plugin-boundaries": "^7.4.4",
     "eslint-plugin-solid": "^0.20.0",
     "oxfmt": "^0.78.0",
     "oxlint": "^1.93.0",
